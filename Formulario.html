@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="Formulario.css" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Cadastro de DEVs</h1>
+            <p id="subtitulo">Complete suas informações</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+            <legend><strong>Início do formulário</strong></legend>
+            <hr>
+            <fieldset class="grupo">
+                <!-- Campo do nome completo com legenda "nome completo" e css de classe "campo" -->
+
+                <br>
+                <div class="campo">
+                    <label for="nome completo"><strong>nome completo</strong></label>
+                    <input type="text" name="nome completo" id="nome completo" pattern="^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$" placeholder="seu nome aqui" required>
+                </div>
+
+           
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="algumaCoisa@gmail.com" required>
+            </div>
+        </fieldset> 
+            <!-- Campo de Telefone com-->
+    <fieldset class="grupo">
+            <div class="campo">
+            <div>
+                <label for="Telefone"><strong>Telefone (opcional)</strong></label>
+                <input type="tel" name="telefone" id="telefone" ng-pattern="/^\([1-9]{2}\)[0-9]{4,5}-[0-9]{4}$/" placeholder="13 99999-9999">
+            </div>
+        </div>
+
+        <!-- Campo de estadoCivil com-->
+        <div class="campo">
+            <div>
+            <label for="estadoCivil"><strong>Estado civil</strong></label>
+            <select name="estadoCivil" id="estadoCivil" required>
+                <option value="">Selecione seu estado civil</option>
+                <option value="1">Solteiro(a)</option>
+                <option value="2">Casado(a)</option>
+                <option value="3">Divorciado(a)</option>
+                <option value="4">Viúvo(a)</option>
+                <option value="5">Separado(a)</option>
+            </select>
+            </div>
+        </div>    
+    </fieldset>
+
+            <!-- campo endereço-->
+                <legend><strong>Endereço</strong></legend>
+                <hr>
+                <br>
+                <!-- Campo do Logradouro  -->
+                <fieldset class="grupo">
+                <div class="campo">
+                    <label for="logradouroUsuario">Logradouro</label>
+                    <input type="text" name="logradouroUsuario" id="logradouroUsuario" required>
+
+                </div>
+
+            <!-- Campo do numero  -->
+            <div class="campo">
+                <label for="numeroCasaUsuario">Número:</label>
+                <input type="text" name="numeroCasaUsuario" id="numeroCasaUsuario" required>
+            </div>
+
+            <!-- Campo do  Bairro -->
+                <div class="campo">
+                    <label for="bairroUsuario">Bairro (opcional):</label>
+                    <input type="text" name="bairroUsuario" id="bairroUsuario">
+                </div>
+            <!-- Campo da cidade -->
+                <div class="campo">
+                    <label for="cidadeUsuario">Cidade:</label>
+                    <input type="text" name="cidadeUsuario" id="cidadeUsuario" required>
+                </div> 
+
+            <!-- Campo do CEP -->
+            <div class="campo">
+                <label for="cepUsuario">CEP:</label>
+                <input type="text" name="cepUsuario" id="cepUsuario" pattern="[0-9]{5}-[0-9]{3}$" placeholder="11111-111" required> <!-- /Estado e CEP -->
+            </div>
+
+             <!-- Campo da Estado -->
+             <div class="campo">
+                <label for="estadoUsuario">Estado:</label>
+
+                <!-- Campo de seleção para estado -->
+                <select name="estadoUsuario" id="estadoUsuario">
+                    <option value="">-- Selecione seu Estado --</option> <!-- Opções para os estados -->
+                    <option value="acre">AC</option>
+                    <option value="alagoas">AL</option>
+                    <option value="amazonas">AM</option>
+                    <option value="amapa">AP</option>
+                    <option value="bahia">BA</option>
+                    <option value="ceara">CE</option>
+                    <option value="distritoFederal">DF</option>
+                    <option value="espiritoSanto">ES</option>
+                    <option value="goias">GO</option>
+                    <option value="maranhao">MA</option>
+                    <option value="minasGerais">MG</option>
+                    <option value="matoGrossoDoDul">MS</option>
+                    <option value="matoGrosso">MT</option>
+                    <option value="para">PA</option>
+                    <option value="paraiba">PB</option>
+                    <option value="pernambuco">PE</option>
+                    <option value="piaui">PI</option>
+                    <option value="parana">PR</option>
+                    <option value="rioDeJaneiro">RJ</option>
+                    <option value="rioGrandeDoNorte">RN</option>
+                    <option value="rondonia">RO</option>
+                    <option value="roraima">RR</option>
+                    <option value="rioGrandeDoSul">RS</option>
+                    <option value="santaCatarina">SC</option>
+                    <option value="sergipe">SE</option>
+                    <option value="saoPaulo">SP</option>
+                    <option value="tocantins">TO</option>
+                </select>
+            </div>
+
+            <!-- Botão para enviar e resetar o formulário -->
+            <div class="campo">
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+            <button class="botao" type="reset" onsubmit="">Limpar</button>   
+            </div>  
+
+            <!-- Botão do li e concordo -->
+            <div id="li_e_concordo">
+                <input type="checkbox" name="liConcordo" id="liConcordo">
+                <label for="liConcordo" class="labelInline">Li e concordo</label>
+            </div>
+
+        </form>
+
+    </body>
+
+</html>
